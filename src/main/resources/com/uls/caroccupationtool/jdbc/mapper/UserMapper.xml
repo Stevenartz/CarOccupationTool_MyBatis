@@ -6,7 +6,25 @@
 <mapper namespace="com.uls.caroccupationtool.jdbc.mapper.UserMapper">
 
   <select id="selectAllUsers" resultType="com.uls.caroccupationtool.jdbc.entity.UserEntity">
-    select * from user
+    SELECT
+    	u.id,
+    	u.email,
+    	u.firstname,
+    	u.lastname
+    FROM
+    	users u;
+  </select>
+  
+  <select id="lookupUserById" resultType="com.uls.caroccupationtool.jdbc.entity.UserEntity">
+    SELECT
+    	u.id,
+    	u.email,
+    	u.firstname,
+    	u.lastname
+    FROM
+    	users u
+    WHERE
+    	u.id = #{userId};
   </select>
 
 </mapper>

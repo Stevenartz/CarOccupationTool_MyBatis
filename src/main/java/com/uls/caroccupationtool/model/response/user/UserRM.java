@@ -1,15 +1,11 @@
-package com.uls.caroccupationtool.jdbc.entity;
+package com.uls.caroccupationtool.model.response.user;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class UserEntity {
+public class UserRM {
 
 	private int id;
 	private String email;
 	private String firstname;
 	private String lastname;
-	private List<GroupEntity> groups = new ArrayList<>();
 	
 	public int getId() {
 		return id;
@@ -34,18 +30,6 @@ public class UserEntity {
 	}
 	public void setLastname(String lastname) {
 		this.lastname = lastname;
-	}
-	public List<GroupEntity> getGroups() {
-		return groups;
-	}
-	public void setGroups(List<GroupEntity> groups) {
-		this.groups = groups;
-	}
-	
-	@Override
-	public String toString() {
-		return "UserEntity [id=" + id + ", email=" + email + ", firstname=" + firstname + ", lastname=" + lastname
-				+ ", groups=" + groups + "]";
 	}
 	
 }
